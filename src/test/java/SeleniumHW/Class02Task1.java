@@ -14,21 +14,23 @@ public class Class02Task1 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
         driver.manage().window().maximize();
-        WebElement createAccount = driver.findElement(By.xpath("//a[text()= 'Create new account']"));
+        WebElement createAccount = driver.findElement(By.xpath("//a[@data-testid= 'open-registration-form-button']"));
         createAccount.click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@name= 'firstname']")).sendKeys("John");
-        driver.findElement(By.xpath("//input[@name= 'lastname']")).sendKeys("Rodriguez");
-        driver.findElement(By.xpath("//input[@name = 'reg_email__']")).sendKeys("JR@gmail.com");
-        driver.findElement(By.xpath("//input[@name = 'reg_email_confirmation__']")).sendKeys("JR@gmail.com");
-        driver.findElement(By.xpath("//input[@name = 'reg_passwd__']")).sendKeys("abc123");
-        driver.findElement(By.xpath("//select[@aria-label ='Month']")).sendKeys("June");
-        driver.findElement(By.xpath("//select[@aria-label= 'Day']")).sendKeys("20");
-        driver.findElement(By.xpath("//select[@aria-label= 'Year']")).sendKeys("2002");
-        WebElement gender = driver.findElement(By.xpath("//label[text()= 'Male']"));
+        driver.findElement(By.xpath("//input[@name= 'firstname']")).sendKeys("Dorothy");
+        driver.findElement(By.xpath("//input[@aria-label= 'Last name']")).sendKeys("Cook");
+        driver.findElement(By.xpath("//input[@name = 'reg_email__']")).sendKeys("DoC@gmail.com");
+        driver.findElement(By.xpath("//input[@aria-label = 'Re-enter email']")).sendKeys("DoC@gmail.com");
+        driver.findElement(By.xpath("//input[@name = 'reg_passwd__']")).sendKeys("3337777");
+        driver.findElement(By.xpath("//select[@id ='month']")).sendKeys("November");
+        driver.findElement(By.xpath("//select[@title= 'Day']")).sendKeys("10");
+        driver.findElement(By.xpath("//select[@aria-label= 'Year']")).sendKeys("1987");
+        WebElement gender = driver.findElement(By.xpath("//label[text()= 'Female']"));
         gender.click();
-        WebElement signUp = driver.findElement(By.xpath("//button[text()= 'Sign Up']"));
-        signUp.click();
+        Thread.sleep(3000);
+        WebElement closePopUp = driver.findElement(By.xpath("//img[@class='_8idr img']"));
+        closePopUp.click();
+        Thread.sleep(1000);
         driver.quit();
 
 
