@@ -1,5 +1,5 @@
 
-Linktext, partialLintext (they can only be used for <a> and it must also have some Text)
+LinkText, partialLinkText (they can only be used for <a> and it must also have some Text)
 
 
 "a" tag is also called an anchor tag, its for the link ...
@@ -16,25 +16,25 @@ if a attribute value has a number in it , it is better to avoid it and use an al
 
 
 
-differnce in linkText and partial link Text?
+difference in linkText and partial link Text?
 
-a parital link text you can use just a part of text, just make sure that it is unqiue enough to stand out .
+a partial link text you can use just a part of text, just make sure that it is unqiue enough to stand out .
 
 
 -----WebElement Commands---
 .clear()
-.sendkeys()
+.sendKeys()
 .getAttribute()
 .getText()
 -------------------
 
 1.Relative Xpath:
 
-	a.Syntax for xapth (finding by attribute):
-							//tagname[@attribute='attribute value']
+	a.Syntax for xpath (finding by attribute):
+							//tagName[@attribute='attribute value']
 
 							translation:
-									hey get me the tagname , which has an 'attibute' whose value is "attribute value"
+									hey get me the tagName , which has an 'attribute' whose value is "attribute value"
 
 
                               *****   Example  ****
@@ -56,14 +56,14 @@ a parital link text you can use just a part of text, just make sure that it is u
 
 
 	b.Syntax for xpath (finding by text):
-									//tagname[text()='text value']
+									//tagName[text()='text value']
 
 
 									translation :
-										hey get me the tagname which has a text    "text value".
+										hey get me the tagName which has a text    "text value".
 
 									condition :
-										our html code (webelement) must have text.
+										our html code (webElement) must have text.
 										****Example:****
 
 									<button id="tro", class="fyo"> heelo </button>
@@ -74,17 +74,17 @@ a parital link text you can use just a part of text, just make sure that it is u
 
 	c.Syntax for xpath (finding by contains method):
 
-							for tagname
+							for tagName
 
-								//tagname[contains(@attribute, 'partial attribute value')]
+								//tagName[contains(@attribute, 'partial attribute value')]
 
 								translation :
 
-								get me the tag name which has an attibute whose value contains "partial value of the attribute"
+								get me the tag name which has an attribute whose value contains "partial value of the attribute"
 
 
                                       ******Example**********
-                              <input email= "how are you i am fine , thankyou" id="dsfs"/>
+                              <input email= "how are you i am fine , thank you" id="dsfs"/>
 
                                xpath using contains method:
 

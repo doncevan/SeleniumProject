@@ -16,7 +16,7 @@ public class CSSDemo {
 //        click on create new account
         WebElement createNewAccount = driver.findElement(By.cssSelector("a[data-testid='open-registration-form-button']"));
         createNewAccount.click();
-//        becuase the DOM doesn't have firstName by default
+//        because the DOM doesn't have firstName by default
 //        it only shows up after click on create new account
 //        and the code takes some time to appear in DOM for firstName
 //        so we must add a sleep here
