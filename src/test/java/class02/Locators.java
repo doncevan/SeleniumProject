@@ -13,7 +13,7 @@ public class Locators {
 //   declare the instance
         WebDriver driver = new ChromeDriver();
 
-//        naviagte to the HRMS
+//        navigate to the HRMS
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/dashboard");
 
 //        maximize the screen
