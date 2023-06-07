@@ -29,7 +29,7 @@ public class Class07DynamicTables extends CommonMethods {
         for (int i = 0; i < allIDs.size(); i++) {
             String id = allIDs.get(i).getText();
             if (id.equals("54007A")) {
-                System.out.println("ID 56296A row number: " + (i + 1));
+                System.out.println("ID 54007 row number: " + (i + 1));
             }
         }
     }
