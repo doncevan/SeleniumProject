@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
+import java.util.List;
 
 public class CommonMethods {
     public static WebDriver driver;
@@ -39,8 +40,35 @@ public class CommonMethods {
         element.sendKeys(text);
     }
 
-    public static void selectFromDropDown(WebDriver driver, String elementId, String optionText) {
-        Select select = new Select(driver.findElement(By.id(elementId)));
-        select.selectByVisibleText(optionText);
+    public static void selectFromDropDown(By dropdownLocator, int optionIndex) {
+        WebElement dropdown = driver.findElement(dropdownLocator);
+        Select sel = new Select(dropdown);
+        sel.selectByIndex(optionIndex);
+    }
+
+    public static void selectDateOnCalendar(String calendarXpath, String monthXpath, String yearXpath, String dateXpath, String selectDate, String selectMonth, String selectYear) {
+        WebElement calendar = driver.findElement(By.xpath((calendarXpath)));
+        calendar.click();
+
+        WebElement month = driver.findElement(By.xpath(monthXpath));
+        Select selMonth = new Select(month);
+        selMonth.selectByVisibleText(selectMonth);
+
+        WebElement year = driver.findElement(By.xpath(yearXpath));
+        Select selYear = new Select(year);
+        selYear.selectByValue(selectYear);
+
+        boolean found = false;
+        while (!found) {
+            List<WebElement> allDates = driver.findElements(By.xpath(dateXpath));
+            for (WebElement date : allDates) {
+                String currentDate = date.getText();
+                if (currentDate.equals(selectDate)) {
+                    date.click();
+                    found = true;
+                    break;
+                }
+            }
+        }
     }
 }
