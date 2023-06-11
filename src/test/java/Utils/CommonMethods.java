@@ -1,12 +1,13 @@
 package Utils;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -44,6 +45,18 @@ public class CommonMethods {
         WebElement dropdown = driver.findElement(dropdownLocator);
         Select sel = new Select(dropdown);
         sel.selectByIndex(optionIndex);
+    }
+    public static final String SCREENSHOT_PATH=System.getProperty("user.dir")+"\\screenshot\\";
+
+    public static void screenShot(String fileName) {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File screenShot = ts.getScreenshotAs(OutputType.FILE);
+        String path = SCREENSHOT_PATH;
+        try {
+            FileUtils.copyFile(screenShot, new File(path + fileName + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void selectDateOnCalendar(String calendarXpath, String monthXpath, String yearXpath, String dateXpath, String selectDate, String selectMonth, String selectYear) {
