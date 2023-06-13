@@ -29,8 +29,8 @@ public class Class08DynamicTables extends CommonMethods {
         selectFromDropDown(By.xpath("//select[@class='ui-datepicker-month']"), 11);
         selectFromDropDown(By.xpath("//select[@class='ui-datepicker-year']"), 189);
 //         Get days from the calendar and loop
-        List<WebElement> calenderDays = driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
-        for (WebElement day : calenderDays) {
+        List<WebElement> calendarDays = driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
+        for (WebElement day : calendarDays) {
             if (day.getText().equals("21")) {
                 day.click();
                 break;
