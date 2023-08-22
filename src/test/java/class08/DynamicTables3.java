@@ -45,5 +45,6 @@ public class DynamicTables3 extends CommonMethods {
                 nextBtn.click();
             }
         }
+        closeBrowser();
     }
 }

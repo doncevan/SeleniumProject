@@ -16,15 +16,14 @@ public class RadioButtonDemo2 extends CommonMethods {
 //        driver.findElements
         List<WebElement> ageGroup = driver.findElements(By.xpath("//input[@name='ageGroup']"));
 // u need to select the option specified by user
-        String option = "15 - 50";
-
+        String option = "5 - 15";
         for (WebElement age : ageGroup) {
-
             String value = age.getAttribute("value");
             if (value.equals(option)) {
                 age.click();
                 break;
             }
         }
+        closeBrowser();
     }
 }

@@ -19,5 +19,6 @@ public class JSExecuterDemo1_5 extends CommonMethods {
 //        script
 //        the script should draw a border around the WebElement
         js.executeScript("arguments[0].style.border='5px solid green'", userNameTxtBox);
+        closeBrowser();
     }
 }

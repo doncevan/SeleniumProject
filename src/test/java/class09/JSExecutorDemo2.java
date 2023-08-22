@@ -4,6 +4,7 @@ import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class JSExecutorDemo2 extends CommonMethods {
     public static void main(String[] args) throws InterruptedException {
@@ -26,8 +27,9 @@ public class JSExecutorDemo2 extends CommonMethods {
 //        use click from jsExecutor
         WebElement select = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
         Thread.sleep(3000);
-//
         js.executeScript("arguments[0].click();", select);
+        System.out.println(select.getText());
+        closeBrowser();
     }
 }
 

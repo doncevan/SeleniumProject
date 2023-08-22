@@ -13,6 +13,7 @@ public class Tables extends CommonMethods {
         String url = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
         String browser = "chrome";
         openBrowserAndLaunchApplication(url, browser);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 //        print the whole table on the console
 
 //***************table level access*********************
@@ -41,5 +42,6 @@ public class Tables extends CommonMethods {
             String cellData = cell.getText();
             System.out.println(cellData);
         }
+        closeBrowser();
     }
 }

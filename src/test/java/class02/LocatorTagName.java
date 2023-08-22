@@ -20,11 +20,9 @@ public class LocatorTagName {
 
 //        traverse
         for (WebElement link : allLinks) {
-
             String linkOfWebsite = link.getAttribute("href");
             System.out.println(linkOfWebsite);
-
+            driver.close();
         }
-
     }
 }

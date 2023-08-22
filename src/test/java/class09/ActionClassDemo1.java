@@ -16,5 +16,6 @@ public class ActionClassDemo1 extends CommonMethods {
         Actions action = new Actions(driver);
 //        perform the desired action
         action.moveToElement(signIn);
+        closeBrowser();
     }
 }

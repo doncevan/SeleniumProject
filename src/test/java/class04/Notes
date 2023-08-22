@@ -17,6 +17,7 @@ WebElement Commands:
  If you want to check whether the checkbox is selected or not:
 
  checkbox.isSelected(); // returns true if selected
+
  Preferred approach for selecting multiple checkboxes:
 
  Inspect them in the DOM.
@@ -60,4 +61,3 @@ WebElement Commands:
  selectByIndex();
  You can also use deselect methods in case of a multi-select dropdown.
  To check if the dropdown is multi-select or not, you can use the isMultiple() method, which returns a boolean true if it is a multi-select dropdown.
- N

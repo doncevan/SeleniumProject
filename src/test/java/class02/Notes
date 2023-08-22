@@ -18,7 +18,7 @@ if a attribute value has a number in it , it is better to avoid it and use an al
 
 difference in linkText and partial link Text?
 
-a partial link text you can use just a part of text, just make sure that it is unqiue enough to stand out .
+a partial link text you can use just a part of text, just make sure that it is unique enough to stand out .
 
 
 -----WebElement Commands---
@@ -66,9 +66,9 @@ a partial link text you can use just a part of text, just make sure that it is u
 										our html code (webElement) must have text.
 										****Example:****
 
-									<button id="tro", class="fyo"> heelo </button>
+									<button id="tro", class="fyo"> hello </button>
 									answer:
-										//button[text()='heelo']
+										//button[text()='hello']
 
 
 

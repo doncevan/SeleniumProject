@@ -5,13 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class RadioButtons extends CommonMethods {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         String url = "http://practice.syntaxtechs.net/basic-radiobutton-demo.php";
         String browser = "chrome";
         openBrowserAndLaunchApplication(url, browser);
 
 //        find the radio btn male and click on it
         WebElement r1 = driver.findElement(By.xpath("//input[@value='Male' and @name='optradio']"));
+        Thread.sleep(1000);
         r1.click();
 
 //        check if the radio button r1 is selected
@@ -28,10 +29,12 @@ public class RadioButtons extends CommonMethods {
 
         //deselect the male r1 button
         WebElement r2 = driver.findElement(By.xpath("//input[@value='Female' and @name='optradio']"));
+        Thread.sleep(1000);
         r2.click();
 
 //        check if the button r1 has been deselected
         r1isSelected = r1.isSelected();
         System.out.println("the male radio button is selected :" + r1isSelected);
+        closeBrowser();
     }
 }

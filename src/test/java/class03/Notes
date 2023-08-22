@@ -2,7 +2,7 @@
 
 Xpath:
 
-1. absolute xpath   --> starts with / and the root node (it is not widely used because the tree might 							change)
+1. absolute xpath   --> starts with / and the root node (it is not widely used because the tree might change)
 2.Relative Xpath
 
   a.Attribute

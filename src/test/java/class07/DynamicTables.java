@@ -27,12 +27,13 @@ public class DynamicTables extends CommonMethods {
 //        look for 56247A
         for (int i = 0; i < allIDs.size(); i++) {
             String id = allIDs.get(i).getText();
-            if (id.equals("56523A")) {
+            if (id.equals("19529454")) {
                 System.out.println("The id "+id+" is on row number " + (i + 1));
                 System.out.println("----------------------------------------");
                 WebElement row = driver.findElement(By.xpath(" //table/tbody/tr[" + (i + 1) + "]"));
                 System.out.println(row.getText());
             }
         }
+        closeBrowser();
     }
 }

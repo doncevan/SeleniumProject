@@ -38,5 +38,6 @@ public class ExplicitWait extends CommonMethods {
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         alert.accept();
+        closeBrowser();
     }
 }

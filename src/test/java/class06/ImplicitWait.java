@@ -24,6 +24,6 @@ public class ImplicitWait extends CommonMethods {
 //        Send the first name
         WebElement firstName = driver.findElement(By.xpath("//input[@name='firstname']"));
         sendText("abracdabra", firstName);
-
+        closeBrowser();
     }
 }

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class CheckBoxDemo extends CommonMethods {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         String url = "http://practice.syntaxtechs.net/basic-checkbox-demo.php";
         String browser = "chrome";
@@ -18,7 +18,7 @@ public class CheckBoxDemo extends CommonMethods {
         WebElement c1 = driver.findElement(By.xpath("//input[@id='isAgeSelected']"));
 
         if (!c1.isSelected()) {
-
+            Thread.sleep(500);
             c1.click();
         }
 
@@ -28,9 +28,11 @@ public class CheckBoxDemo extends CommonMethods {
         for (WebElement option : options) {
             String value = option.getAttribute("value");
             if (value.equals("Option-3")) {
+                Thread.sleep(500);
                 option.click();
                 break;
             }
         }
+        closeBrowser();
     }
 }

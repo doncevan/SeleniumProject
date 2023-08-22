@@ -14,6 +14,5 @@ public class LaunchingBrowser {
         System.out.println(title);
         Thread.sleep(5000);
         driver.quit();
-
     }
 }

@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.nio.file.WatchEvent;
-
 public class Locators {
     public static void main(String[] args) throws InterruptedException {
 
@@ -26,7 +24,7 @@ public class Locators {
         WebElement usrNameTxtBox = driver.findElement(By.id("txtUsername"));
         usrNameTxtBox.sendKeys("Admin");
 //        slow down
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 //after sending the username to the textBox clear the text box  JUST FOR PRACTICE WE ARE DELETING IT
         usrNameTxtBox.clear();
 
@@ -47,6 +45,6 @@ public class Locators {
         System.out.println(text);
 //click on the recruitment tab
         driver.findElement(By.partialLinkText("Recru")).click();
-
+        driver.close();
     }
 }

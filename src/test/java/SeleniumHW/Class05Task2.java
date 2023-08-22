@@ -20,7 +20,7 @@ public class Class05Task2 extends CommonMethods {
         Thread.sleep(1000);
         driver.switchTo().frame(1);
 
-        WebElement animal = driver.findElement(By.xpath("//b[text()='Animals :']"));
+        WebElement animal = driver.findElement(By.xpath("/html/body/b"));
         System.out.println(animal.getText());
 
         WebElement dd = driver.findElement(By.xpath("//select[@id='animals']"));
@@ -33,5 +33,7 @@ public class Class05Task2 extends CommonMethods {
         driver.switchTo().frame("frame1");
         WebElement textBox = driver.findElement(By.xpath("//input"));
         textBox.sendKeys("Hello world");
+        Thread.sleep(1000);
+        driver.close();
     }
 }

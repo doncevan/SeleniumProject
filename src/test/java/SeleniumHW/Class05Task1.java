@@ -18,5 +18,6 @@ public class Class05Task1 extends CommonMethods {
         confirmationAlert.sendKeys("I did it!");
         Thread.sleep(2000);
         confirmationAlert.accept();
+        driver.close();
     }
 }

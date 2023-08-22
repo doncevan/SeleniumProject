@@ -14,11 +14,10 @@ fullscreen() vs maximize()
 
 
     What is a WebElement?
-    anything we see on the web page is considered to be a webelement
-    e.g. buttons, textboxes, checkboxes, links
+    anything we see on the web page is considered to be a webElement
+    e.g. buttons, textBoxes, checkboxes, links
 
-    HTML?
-    HyperText Markup Language
+    HTML? -->  HyperText Markup Language
 
     What is DOM?
     DOM stands for Document Object Model. It is the browser's
@@ -29,18 +28,19 @@ fullscreen() vs maximize()
     Model --> it is just a layout of the HTML
 
     Locator
-    is an address or a position of an webelement on the web page
-    is used to locate or identify webelements on the webpage
+    is an address or a position of an webElement on the web page
+    is used to locate or identify webElements on the webpage
 
     8 Locators:
     - ID
     - Name
-    - Tagname
+    - tagName
+    - className
     - xpath
-    - linktext
+    - linkText
     - partialLinkText
     - CSS Selector
-    - ClassName
+
 
 
     Why do we need many locators?

@@ -16,9 +16,11 @@ public class WindowHandles extends CommonMethods {
         WebElement helpBtn = driver.findElement(By.linkText("Help"));
         helpBtn.click();
 
-        WebElement privacyBtn = driver.findElement(By.xpath("//a[text()='Privacy']"));
+        WebElement privacyBtn = driver.findElement(By.linkText("Privacy"));
         privacyBtn.click();
 
+        WebElement termsBtn = driver.findElement(By.linkText("Terms"));
+        termsBtn.click();
 
 //        get the window handle of the main page and print on console
 //        also save it for later use
@@ -35,6 +37,7 @@ public class WindowHandles extends CommonMethods {
         for (String handle : allHandles) {
             driver.switchTo().window(handle);
             String title = driver.getTitle();
+            System.out.println(title + " ");
             if (title.equalsIgnoreCase("Google Account Help")) {
                 break;
             }
@@ -52,6 +55,6 @@ public class WindowHandles extends CommonMethods {
 
 //        check the focus
         System.out.println("the focus is on :" + driver.getTitle());
-
+        closeBrowser();
     }
 }

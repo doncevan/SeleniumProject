@@ -16,5 +16,6 @@ public class JSExecuterClickOperation extends CommonMethods {
 //
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", loginBtn);
+        closeBrowser();
     }
 }

@@ -15,7 +15,7 @@ public class FileUpload extends CommonMethods {
 //        in order to send/upload the file
 //       u can send the path of that file in sendKEys.
 //        the file path will be different for everyone depending on their own system
-        fileUploadBtn.sendKeys("C:\\Users\\magre\\OneDrive\\Desktop\\Employees.xlsx");
-
+        fileUploadBtn.sendKeys("C:\\Users\\magre\\Desktop\\BDD_Testing.txt");
+        driver.findElement(By.id("file-submit")).click();
     }
 }
