@@ -31,9 +31,9 @@ public class Class05Task2 extends CommonMethods {
         driver.switchTo().defaultContent();
 
         driver.switchTo().frame("frame1");
-        WebElement textBox = driver.findElement(By.xpath("//input"));
+        WebElement textBox = driver.findElement(By.xpath("//input[@type='text']"));
         textBox.sendKeys("Hello world");
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         driver.close();
     }
 }

@@ -32,6 +32,6 @@ public class Class07DynamicTables extends CommonMethods {
                 System.out.println("ID 54007 row number: " + (i + 1));
             }
         }
+        closeBrowser();
     }
 }
-

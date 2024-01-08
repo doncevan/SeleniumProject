@@ -20,9 +20,7 @@ public class brokenLinks extends CommonMethods {
             if (linkURL != null) {
                 URL obj = new URL(url);
                 HttpURLConnection conn = ((HttpURLConnection)
-
                         obj.openConnection());
-
                 int rCode = conn.getResponseCode();
                 if (rCode == 200) {
                     System.out.println(i + " Link is valid------" + linkURL);

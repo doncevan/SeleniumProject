@@ -16,21 +16,19 @@ public class CalendarsReview_2 extends CommonMethods {
         openBrowserAndLaunchApplication(url, browser);
 //locate the calander
         WebElement calander = driver.findElement(By.xpath("//div[@role='button']"));
-        JavascriptExecutor js=(JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        click on calander
-        js.executeScript("arguments[0].click();",calander);
+        js.executeScript("arguments[0].click();", calander);
 //        get the month
         WebElement month = driver.findElement(By.xpath("//span[@class='dl-datepicker-month-0']"));
 
-        boolean found=false;
-        while(!found){
+        boolean found = false;
+        while (!found) {
             String currentMonth = month.getText();
-            if(currentMonth.equals("September")){
-                js.executeScript("arguments[0].style.border='5px solid pink'",month);
-                found=true;
-
-            }
-            else {
+            if (currentMonth.equals("September")) {
+                js.executeScript("arguments[0].style.border='5px solid pink'", month);
+                found = true;
+            } else {
 //            next button
                 WebElement nxtBtn = driver.findElement(By.xpath("//span[text()='Next']"));
                 nxtBtn.click();
@@ -39,13 +37,14 @@ public class CalendarsReview_2 extends CommonMethods {
 
 //        --------
         List<WebElement> Dates = driver.findElements(By.xpath("//table/tbody/tr/td"));
-        for(WebElement date:Dates){
+        for (WebElement date : Dates) {
             String dd = date.getText();
-            if(dd.equals("17")){
+            if (dd.equals("17")) {
                 date.click();
                 break;
             }
         }
         screenShot("Calendar");
+        closeBrowser();
     }
 }

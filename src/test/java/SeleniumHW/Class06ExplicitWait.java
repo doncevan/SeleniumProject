@@ -4,6 +4,7 @@ package SeleniumHW;
     click on start
     print the text "welcome syntax technologies "on console
     */
+
 import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,5 +25,6 @@ public class Class06ExplicitWait extends CommonMethods {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.textToBePresentInElement(text, "Welcome Syntax Technologies"));
         System.out.println(text.getText());
+        closeBrowser();
     }
 }

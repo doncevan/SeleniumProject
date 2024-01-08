@@ -16,5 +16,6 @@ public class ActionDragAndDrop extends CommonMethods {
 
         Actions action = new Actions(driver);
         action.clickAndHold(draggable).moveToElement(droppable).release().build().perform();
+        closeBrowser();
     }
 }

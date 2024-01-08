@@ -25,5 +25,6 @@ public class ActionReview extends CommonMethods {
         action.click(loginBtn).perform();
         WebElement leaveTab = driver.findElement(By.id("menu_leave_viewLeaveModule"));
         action.moveToElement(leaveTab).perform();
+        closeBrowser();
     }
 }

@@ -1,7 +1,9 @@
 package SeleniumReview;
 
 import Utils.CommonMethods;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 import java.io.IOException;
 
@@ -19,7 +21,7 @@ public class KeysDemoAndScreenShot extends CommonMethods {
         Thread.sleep(2000);
         textBox = driver.findElement(By.id("target"));
         textBox.sendKeys(Keys.ARROW_DOWN);
-
         screenShot("Keys1");
+        closeBrowser();
     }
 }

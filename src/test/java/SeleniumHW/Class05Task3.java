@@ -3,7 +3,6 @@ package SeleniumHW;
 import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class Class05Task3 extends CommonMethods {
     public static void main(String[] args) throws InterruptedException {

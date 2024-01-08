@@ -29,5 +29,6 @@ public class tablesReview extends CommonMethods {
                 driver.findElement(By.xpath(checkBoxXpath)).click();
             }
         }
+        closeBrowser();
     }
 }

@@ -40,5 +40,6 @@ public class CalendarReview extends CommonMethods {
                 break;
             }
         }
+        closeBrowser();
     }
 }

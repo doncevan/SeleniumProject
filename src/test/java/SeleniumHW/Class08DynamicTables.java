@@ -36,7 +36,6 @@ public class Class08DynamicTables extends CommonMethods {
                 break;
             }
         }
+        closeBrowser();
     }
 }
-
-
